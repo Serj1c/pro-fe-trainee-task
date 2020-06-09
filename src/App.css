@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    margin: 3rem auto;
+    width: 75%;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    background: skyblue;
+    width: 100%;
+    padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar h2 {
+    margin-bottom: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #000;
+    background: skyblue;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.repo-card {
+    width: 100%;
+    display: inline-block;
+    margin: 0.5rem auto;
+    border: 1px lightgray solid;
+}
+
+.date {
+    margin-left: 1rem;
+    margin-right: 1rem; 
+}
+
+.repo-card-title {
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.repo-card-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repo-card-stars {
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.repo-card-link {
+    margin: 0 0 0.5rem 0.5rem;
 }
