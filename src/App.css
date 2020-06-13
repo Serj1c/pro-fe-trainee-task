@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+}
+
 .container {
     margin: 3rem auto;
     width: 75%;
@@ -62,6 +67,11 @@
     margin: 0.5rem 0 0 0.5rem;
 }
 
+.repo-card-title-link {
+    text-decoration: none;
+    
+}
+
 .repo-card-content {
     display: flex;
     justify-content: space-between;
@@ -73,4 +83,19 @@
 
 .repo-card-link {
     margin: 0 0 0.5rem 0.5rem;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 1rem auto;
+    align-items: center;
+}
+
+.search-card h1 {
+    text-align: center;
+    font-size: 3rem;
 }

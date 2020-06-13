@@ -24,6 +24,7 @@ export default class TopRepos extends Component {
                                             stars={repo.stargazers_count}
                                             commits={repo.updated_at}
                                             link={repo.html_url}
+                                            id={repo.id}
                                         />
                                     ))}
                                 </div>
