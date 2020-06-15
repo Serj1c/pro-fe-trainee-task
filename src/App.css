@@ -7,6 +7,11 @@
 a {
     text-decoration: none;
     color: #333;
+    cursor: pointer;
+}
+
+a:hover {
+    color: skyblue;
 }
 
 .container {
@@ -49,6 +54,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .repo-card {
@@ -68,8 +74,7 @@ a {
 }
 
 .repo-card-title-link {
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 .repo-card-content {
@@ -98,4 +103,32 @@ input {
 .search-card h1 {
     text-align: center;
     font-size: 3rem;
+}
+
+.owner-login {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.owner-avatar img {
+    width: 35%;
+    margin-bottom: 1rem;
+}
+
+.langs {
+    margin-bottom: 1rem;
+}
+
+.modal-page nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-commit {
+    margin-bottom: 1rem;
+}
+
+.description {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
