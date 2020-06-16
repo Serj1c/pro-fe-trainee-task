@@ -14,7 +14,7 @@ class Search extends Component {
 
     findRepos = (dispatch, e) => {
         e.preventDefault();
-        axios.get(`https://api.github.com/search/repositories?q=${this.state.repoName}&per_page=10`)
+        axios.get(`https://api.github.com/search/repositories?q=${this.state.repoName}&per_page=20`)
             .then(res => {
                 dispatch({
                     type: 'SEARCH_REPOS',

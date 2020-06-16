@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Consumer } from './Context';
 import Repo from './Repo';
 import Spinner from './Spinner';
+import Paginator from './Paginator';
 
 
 class TopRepos extends Component {
@@ -11,8 +12,19 @@ class TopRepos extends Component {
             <Consumer>
                 {value => {
                     const { heading, toprepos_list } = value;
-
                     console.log(value);
+
+                    let currentPage = 1;
+                    const resultsPerPage = 10;
+
+                    //Get current result
+                    const indexOfLastResult = currentPage * resultsPerPage;
+                    const indexOfFirstResult = indexOfLastResult - resultsPerPage;
+                    const currentResults = toprepos_list.slice(indexOfFirstResult, indexOfLastResult);
+
+                    // Change page
+                    const paginate = (pageNumber) => currentPage = pageNumber;
+
                     if (toprepos_list === undefined || toprepos_list.length === 0) {
                         return <Spinner />
                     } else {
@@ -20,7 +32,7 @@ class TopRepos extends Component {
                             <React.Fragment>
                                 <h1 className="title">{heading}</h1>
                                 <div className="cards">
-                                    {toprepos_list.map(repo => (
+                                    {currentResults.map(repo => (
                                         <Repo
                                             key={repo.id}
                                             name={repo.name}
@@ -37,6 +49,7 @@ class TopRepos extends Component {
                                         />
                                     ))}
                                 </div>
+                                <Paginator totalResults={toprepos_list.length} resultsPerPage={resultsPerPage} paginate={paginate} />
                             </React.Fragment>
                         )
                     }

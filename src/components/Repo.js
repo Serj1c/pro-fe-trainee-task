@@ -41,9 +41,8 @@ export default function Repo(props) {
                         <img src={props.owner} alt=""/>
                     </div>
                     <div className="owner-login">
-                        <span>Owner: </span> 
                         <a href={props.ownlink} target='_blank' rel="noopener noreferrer">
-                            <span><strong>{props.ownlog}</strong></span>
+                            <span>Owner: <strong>{props.ownlog}</strong></span>
                         </a>
                     </div>   
                 </div>
