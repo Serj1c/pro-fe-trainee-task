@@ -132,3 +132,25 @@ input {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.paginator {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    border: 1px solid lightgray;
+}
+
+.page-item:active {
+    background: #333;
+    color: #fff;
+}

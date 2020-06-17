@@ -23,7 +23,9 @@ class TopRepos extends Component {
                     const currentResults = toprepos_list.slice(indexOfFirstResult, indexOfLastResult);
 
                     // Change page
-                    const paginate = (pageNumber) => currentPage = pageNumber;
+                    function paginate (pageNumber) {
+                        return currentPage = pageNumber;
+                    };
 
                     if (toprepos_list === undefined || toprepos_list.length === 0) {
                         return <Spinner />
